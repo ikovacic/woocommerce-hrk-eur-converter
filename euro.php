@@ -118,7 +118,7 @@ function applause_convert_products() {
         $wpdb->prepare(
             "UPDATE {$wpdb->prefix}postmeta
             SET meta_value = ROUND((meta_value/%f), %d)
-            WHERE meta_key IN ('_lowest_price_30_days', '_price', '_sale_price', '_regular_price', '_cost')
+            WHERE meta_key IN ('_lowest_price_30_days', '_price', '_sale_price', '_regular_price', '_min_variation_price', '_max_variation_price', '_min_variation_regular_price', '_max_variation_regular_price', '_min_variation_sale_price', '_max_variation_sale_price')
             AND meta_value != ''",
             $config['fixed_rate'],
             $config['precision']
