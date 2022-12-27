@@ -27,16 +27,19 @@ Prije pokretanja je preporučljivo backupirati bazu ili izvršiti ovo na staging
 8. Promijeniti cijenu dostave i valutu u feedovima (npr. Jeftinije.hr)
 9. Obrnuti prikaz glavne valute ukoliko ne koristite Borkov plugin
 
-```if( get_option( 'woocommerce_currency' ) == 'EUR' ) {
+```
+if( get_option( 'woocommerce_currency' ) == 'EUR' ) {
     return wc_price( $price * $exchange_rate, array( 'currency' => 'HRK' ) );
 }
+```
 
 return wc_price( $price / $exchange_rate, array( 'currency' => 'EUR' ) );```
 
 10. Provjeriti ima li kakve logike u templateovima ili pluginovima vezano uz besplatnu dostavu (npr. WC()->cart->subtotal >= 300)
 11. Provjeriti postoji li potreba za različitom logikom u template fajlovima, primjeri
 
-```if( get_option( 'woocommerce_currency' ) == 'EUR' ) {
+```
+if( get_option( 'woocommerce_currency' ) == 'EUR' ) {
     echo 'Dostava samo 3,98€';
 } else {
     echo 'Dostava samo 30kn';
@@ -47,7 +50,8 @@ if( time() > 1672527600 ) {
     echo 'Kupite na 12 rata za xx EUR';
 } else {
     echo 'Kupite na 12 rata za yy kn';
-}```
+}
+```
 
 ## Nije pokriveno
 1. Akrivne pretplate u kunama (WooCommerce Subscriptions)
