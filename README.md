@@ -28,6 +28,8 @@ Prije pokretanja je preporučljivo backupirati bazu ili izvršiti ovo na staging
 9. Obrnuti prikaz glavne valute ukoliko ne koristite Borkov plugin
 
 ```
+$exchange_rate = 7.53450;
+
 if( get_option( 'woocommerce_currency' ) == 'EUR' ) {
     return wc_price( $price * $exchange_rate, array( 'currency' => 'HRK' ) );
 }
