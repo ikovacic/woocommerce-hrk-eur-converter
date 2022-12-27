@@ -12,7 +12,7 @@ Skriptu je potrebno dodati u folder public_html/scripts i zatim pokrenuti u brow
 
 ## VAŽNO
 
-Ovo je work in progresss i potrebno je još pretvoriti skriptu u plugin kako bismo omogućili pokretanje WP cronom 1.1. u 00:00:00. Ukoliko ovo neću stići, a nitko iz zajednice ne pošalje merge request, moguće je jednostavno postaviti server cron.
+Ovo je work in progresss i potrebno je još **pretvoriti skriptu u plugin kako bismo omogućili pokretanje WP cronom 1.1. u 00:00:00.** Ukoliko ovo neću stići, a nitko iz zajednice ne pošalje merge request, moguće je jednostavno postaviti server cron.
 
 Prije pokretanja je preporučljivo backupirati bazu ili izvršiti ovo na staging okruženju.
 
@@ -46,6 +46,7 @@ if( get_option( 'woocommerce_currency' ) == 'EUR' ) {
 }
 
 // alternativno, moguće je provjeravati i trenutni timestamp (1672527600 == 1.1.2022. 00:00:00)
+
 if( time() > 1672527600 ) {
     echo 'Kupite na 12 rata za xx EUR';
 } else {
