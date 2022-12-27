@@ -64,4 +64,4 @@ if( time() >= 1672527600 ) {
 ## Podrška
 Prijave bugova raditi isključivo kroz Github budući da se kroz emailove, Facebook grupe i ostale kanale, izgube poruke, a rješenja koja se objave tamo nisu vidljiva svima.
 
-Budući da imam puno shopova koji se trebaju prebaciti na EURO + veliki projekt u finalizaciji, u periodu prije 20.1. neću moći davati podršku za prelazak na EURO.
+Budući da imam puno shopova koji se trebaju prebaciti na EURO + veliki projekt u finalizaciji, **u periodu prije 20.1. neću moći davati podršku za prelazak na EURO.**
