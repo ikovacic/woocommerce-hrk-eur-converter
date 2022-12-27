@@ -23,11 +23,11 @@ function applause_convert_options() {
     global $wpdb;
 
     $wpdb->query( 
-    	$wpdb->prepare( 
-    		"UPDATE {$wpdb->prefix}options SET option_value = %s WHERE option_name = %s",
-    	    'EUR',
-    		'woocommerce_currency'
-    	)
+        $wpdb->prepare( 
+            "UPDATE {$wpdb->prefix}options SET option_value = %s WHERE option_name = %s",
+            'EUR',
+            'woocommerce_currency'
+        )
     );
 
     echo "<div>Uspješno ažurirana valuta shopa</div>";
@@ -141,9 +141,9 @@ function applause_convert_products() {
 
 function applause_lookup_tables() {
 
-	if ( function_exists( 'wc_update_product_lookup_tables_column' ) ) {
-		wc_update_product_lookup_tables_column( 'min_max_price' );
-	}
+    if ( function_exists( 'wc_update_product_lookup_tables_column' ) ) {
+        wc_update_product_lookup_tables_column( 'min_max_price' );
+    }
     echo "<div>Rekreiranje lookup tablica dovršeno</div>";
 }
 
