@@ -49,7 +49,7 @@ if( get_option( 'woocommerce_currency' ) == 'EUR' ) {
 
 // alternativno, moguće je provjeravati i trenutni timestamp (1672527600 == 1.1.2022. 00:00:00)
 
-if( time() > 1672527600 ) {
+if( time() >= 1672527600 ) {
     echo 'Kupite na 12 rata za xx EUR';
 } else {
     echo 'Kupite na 12 rata za yy kn';
