@@ -12,7 +12,7 @@ Skriptu je potrebno dodati u folder public_html/scripts i zatim pokrenuti u brow
 
 ## VAŽNO
 
-Ovo je work in progresss i potrebno je još **pretvoriti skriptu u plugin kako bismo omogućili pokretanje WP cronom 1.1. u 00:00:00.** Ukoliko ovo neću stići, a nitko iz zajednice ne pošalje merge request, moguće je jednostavno postaviti server cron.
+Ovo je work in progresss i potrebno je još **pretvoriti skriptu u plugin kako bismo omogućili pokretanje WP cronom 1.1. u 00:00:00.** Ukoliko ovo neću stići, a nitko iz zajednice ne pošalje merge request, moguće je jednostavno postaviti server cron ili pokrenuti ručno.
 
 Prije pokretanja je preporučljivo backupirati bazu ili izvršiti ovo na staging okruženju.
 
@@ -25,7 +25,7 @@ Prije pokretanja je preporučljivo backupirati bazu ili izvršiti ovo na staging
 6. Ukloniti konverziju HRK > EUR ukoliko koristite PayPal
 7. Ažurirati valutu u conversion trackingu (Google, Affiliate)
 8. Promijeniti cijenu dostave i valutu u feedovima (npr. Jeftinije.hr)
-9. Obrnuti prikaz glavne valute ukoliko ne koristite Borkov plugin
+9. Obrnuti prikaz glavne valute ukoliko **NE koristite Borkov plugin**
 
 ```
 $exchange_rate = 7.53450;
