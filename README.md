@@ -31,9 +31,9 @@ Prije pokretanja je preporučljivo backupirati bazu ili izvršiti ovo na staging
 if( get_option( 'woocommerce_currency' ) == 'EUR' ) {
     return wc_price( $price * $exchange_rate, array( 'currency' => 'HRK' ) );
 }
-```
 
-return wc_price( $price / $exchange_rate, array( 'currency' => 'EUR' ) );```
+return wc_price( $price / $exchange_rate, array( 'currency' => 'EUR' ) );
+```
 
 10. Provjeriti ima li kakve logike u templateovima ili pluginovima vezano uz besplatnu dostavu (npr. WC()->cart->subtotal >= 300)
 11. Provjeriti postoji li potreba za različitom logikom u template fajlovima, primjeri
