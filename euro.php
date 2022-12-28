@@ -147,6 +147,19 @@ function applause_lookup_tables() {
     echo "<div>Rekreiranje lookup tablica dovršeno</div>";
 }
 
+// 06. Delete cached prices
+
+function applause_delete_transients() {
+
+    global $wpdb;
+
+    $wpdb->query(
+        "DELETE FROM {$wpdb->prefix}options WHERE option_name LIKE '_transient_wc_var_prices_%' OR option_name LIKE '_transient_timeout_wc_var_prices_%'"
+    );
+
+    echo "<div>Obrisani transienti</div>";
+}
+
 function applause_convert_currency() {
 
     $try = 'applause_currency';
@@ -159,6 +172,7 @@ function applause_convert_currency() {
         applause_convert_coupons();
         applause_convert_products();
         applause_lookup_tables();
+        applause_delete_transients();
 
         // Clear cache (WP Super Cache only)
         if ( function_exists( 'wp_cache_clean_cache' ) ) {
