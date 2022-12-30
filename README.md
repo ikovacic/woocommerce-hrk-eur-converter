@@ -1,6 +1,6 @@
 # [WIP] Woocommerce HRK 2 EUR Converter
 
-Skripta za pretvaranje svih cijena iz HRK > EUR:
+Dodatak za pretvaranje svih cijena iz HRK > EUR:
 - postavke defaultne valute
 - dostava
 - kuponi
@@ -8,11 +8,14 @@ Skripta za pretvaranje svih cijena iz HRK > EUR:
 - povijest promjena cijena proizvoda
 - generira lookup tablice
 
-Skriptu je potrebno dodati u folder public_html/scripts i zatim pokrenuti u browseru https://www.vasadomena.com/scripts/euro.php
+## Instalacija
+- Preuzetu zip datoteku instalirati kroz WP sučelje i aktivirati plugin.
+- Otići na Woocommerce -> Postavke -> HRK => EUR tab i pokrenuti konverziju
+- Isključiti (deaktivirati) plugin i deinstalirati ga
 
 ## VAŽNO
 
-Ovo je work in progresss i potrebno je još **pretvoriti skriptu u plugin kako bismo omogućili pokretanje WP cronom 1.1. u 00:00:00.** Ukoliko ovo neću stići, a nitko iz zajednice ne pošalje merge request, moguće je jednostavno postaviti server cron ili pokrenuti ručno.
+Ovo je work in progresss i potrebno je još **omogućiti pokretanje WP cronom 1.1. u 00:00:00.** Ukoliko ovo neću stići, a nitko iz zajednice ne pošalje merge request, moguće je jednostavno postaviti server cron ili pokrenuti ručno.
 
 Prije pokretanja je preporučljivo backupirati bazu ili izvršiti ovo na staging okruženju.
 
@@ -57,7 +60,7 @@ if( time() >= 1672527600 ) {
 ```
 
 ## Nije pokriveno
-1. Akrivne pretplate u kunama (WooCommerce Subscriptions)
+1. Aktivne pretplate u kunama (WooCommerce Subscriptions)
 2. Pluginovi koji na razne načine primjenjuju discount ruleove u fiksnom iznosu
 3. Stari reportovi
 
