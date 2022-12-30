@@ -26,7 +26,7 @@ class Hrk2eur {
         $this->notices = array();
         $this->config = array(
             'fixed_rate' => 7.53450,
-            'precision' => 2,
+            'precision' => 5,
         );
 
         add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_hrk2eur_tab' ), 150 );

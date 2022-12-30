@@ -8,16 +8,14 @@ Dodatak za pretvaranje svih cijena iz HRK > EUR:
 - povijest promjena cijena proizvoda
 - generira lookup tablice
 
-## Instalacija
+## Instalacija i korištenje
 - Preuzetu zip datoteku instalirati kroz WP sučelje i aktivirati plugin.
 - Otići na Woocommerce -> Postavke -> HRK => EUR tab i pokrenuti konverziju
 - Isključiti (deaktivirati) plugin i deinstalirati ga
 
 ## VAŽNO
 
-Ovo je work in progresss i potrebno je još **omogućiti pokretanje WP cronom 1.1. u 00:00:00.** Ukoliko ovo neću stići, a nitko iz zajednice ne pošalje merge request, moguće je jednostavno postaviti server cron ili pokrenuti ručno.
-
-Prije pokretanja je preporučljivo backupirati bazu ili izvršiti ovo na staging okruženju.
+Prije pokretanja preporuča se backupirati bazu ili izvršiti ovo na staging okruženju.
 
 ## Ne zaboravite
 1. Proći statične stranice (npr. Uvjeti prodaje) i cijene u kunama izraziti u EUR-ima (ili u obje valute)
@@ -66,5 +64,3 @@ if( time() >= 1672527600 ) {
 
 ## Podrška
 Prijave bugova raditi isključivo kroz Github budući da se kroz emailove, Facebook grupe i ostale kanale, izgube poruke, a rješenja koja se objave tamo nisu vidljiva svima.
-
-Budući da imam puno shopova koji se trebaju prebaciti na EURO + veliki projekt u finalizaciji, **u periodu prije 20.1. neću moći davati podršku za prelazak na EURO.**
