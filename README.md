@@ -22,11 +22,10 @@ Prije pokretanja preporuča se backupirati bazu ili izvršiti ovo na staging okr
 2. Updateati Payment gateway plugin (npr. CorvusPay)
 3. Provjeriti konekciju s vanjskim sustavima (npr. ERP)
 4. Reindeksirati vanjske sustave za pretragu ako ih koristite (npr. Doofinder)
-5. Provjeriti vremensku zonu u WP-u kako bi se cron izvršio u točno vrijeme
-6. Ukloniti konverziju HRK > EUR ukoliko koristite PayPal
-7. Ažurirati valutu u conversion trackingu (Google, Affiliate)
-8. Promijeniti cijenu dostave i valutu u feedovima (npr. Jeftinije.hr)
-9. Obrnuti prikaz glavne valute ukoliko **NE koristite Borkov plugin**
+5. Ukloniti konverziju HRK > EUR ukoliko koristite PayPal
+6. Ažurirati valutu u conversion trackingu (Google, Affiliate)
+7. Promijeniti cijenu dostave i valutu u feedovima (npr. Jeftinije.hr)
+8. Obrnuti prikaz glavne valute ukoliko **NE koristite Borkov plugin**
 
 ```
 $exchange_rate = 7.53450;
@@ -38,6 +37,7 @@ if( get_option( 'woocommerce_currency' ) == 'EUR' ) {
 return wc_price( $price / $exchange_rate, array( 'currency' => 'EUR' ) );
 ```
 
+9. Ukoliko koristite Borkov plugin, ažurirajte ga na [zadnju verziju](https://media-x.hr/woocommerce-prikaz-informativne-cijene-u-eurima/#hrk-eur-3)
 10. Provjeriti ima li kakve logike u templateovima ili pluginovima vezano uz besplatnu dostavu (npr. WC()->cart->subtotal >= 300)
 11. Provjeriti postoji li potreba za različitom logikom u template fajlovima, primjeri
 
