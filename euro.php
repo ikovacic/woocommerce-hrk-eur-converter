@@ -22,7 +22,7 @@ class Hrk2eur {
 
     public function __construct() {
 
-		$this->plugin_name = 'hrk2eur';
+        $this->plugin_name = 'hrk2eur';
         $this->notices = array();
         $this->config = array(
             'fixed_rate' => 7.53450,
@@ -33,11 +33,11 @@ class Hrk2eur {
         add_action( 'woocommerce_settings_hrk2eur_admin_tab', array( $this, 'hrk2eur_output_settings' ));
         add_action( 'woocommerce_settings_save_hrk2eur_admin_tab', array( $this, 'hrk2eur_save' ));
         add_action( 'admin_notices', array( $this, 'hrk2eur_notices' ));
-	}
+    }
 
     public function get_plugin_name() {
-		return $this->plugin_name;
-	}
+        return $this->plugin_name;
+    }
 
     public static function add_hrk2eur_tab( $tabs ) {
         $tabs['hrk2eur_admin_tab'] = __( 'HRK=>EUR', 'woocommerce' );
