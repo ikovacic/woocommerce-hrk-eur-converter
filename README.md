@@ -1,4 +1,4 @@
-# [WIP] Woocommerce HRK 2 EUR Converter
+# Woocommerce HRK 2 EUR Converter
 
 Dodatak za pretvaranje svih cijena iz HRK > EUR:
 - postavke defaultne valute
